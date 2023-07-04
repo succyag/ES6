@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            let a = 10;
+            var b = 1;
+        }
+        // console.log(a);
+        console.log(b);
+
+        for (let i = 0; i < 10; i++) {
+
+        }
+        // console.log(i)
+
+        // var a = [];
+        // for (var i = 0; i < 10; i ++) {
+        //     a[i] = function () {
+        //         console.log(i);
+        //     };
+        // }
+        // a[6]();
+
+        var a = [];
+        // console.log(a);
+        for (let i = 0; i < 10; i++) {
+            // console.log(i);
+            a[i] = function () {
+                console.log(i);
+            };
+        }
+        // console.log("-------");
+        // a[0]();
+        // a[1]();
+        // a[2]();
+        // a[3]();
+        a[6]();
+
+        for (let i = 0; i < 3; i++) {
+            let i = 'succyag';
+            console.log(i);
+        }
+
+        console.log(foo);
+        var foo = 2;
+
+        // console.log(bar);
+        // let bar = 2;
+
+        // var tmp = 123;
+        // if (true) {
+        //     tmp = 'abc';
+        //     let tmp;
+        // }
+
+        if (true) {
+            // tmp = 'abc';
+            // console.log(tmp);
+
+            let tmp;
+            console.log(tmp);
+
+            tmp = 123;
+            console.log(tmp);
+        }
+
+        // console.log(typeof x);
+        // let x;
+
+        // function bar(x = y, y = 2) {
+        //     return [x, y];
+        // }
+        // bar();
+
+        function bar (x = 2, y = x) {
+            return [x, y];
+        }
+        console.log(bar());
+
+        // var x = x;
+        // let x = x;
+
+        function func1 () {
+            // var a = 1;
+            let a = 10;
+            // var a = 1;
+        }
+
+        function func2 () {
+            let a = 10;
+            // let a = 1;
+        }
+
+        function func3 (arg) {
+            // let arg;
+        }
+        // func3();
+
+        function func4 (arg) {
+            {
+                let arg;
+            }
+        }
+        func4();
+
+        // var tmp = new Date();
+        // console.log(tmp);
+        function f () {
+            console.log(tmp);
+            if (false) {
+                tmp = 'hello world';
+            }
+        }
+        // f();
+
+        
+    </script>
+</body>
+
+</html>
