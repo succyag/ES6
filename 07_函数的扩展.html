@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // function log(x, y = 'World') {
@@ -72,7 +74,7 @@
 
         // function add(...values) {
         //     let sum = 0;
-            
+
         //     for (let val of values) {
         //         sum += val;
         //     }
@@ -170,7 +172,86 @@
         // var t2 = f().call({id: 3})();
         // var t3 = f()().call({id: 4});
 
-        
+        // globalThis.s = 21;
+
+        // const obj = {
+        //     s: 42,
+        //     m: () => console.log(this.s)
+        // };
+
+        // obj.m();
+
+        // globalThis.s = 21;
+        // globalThis.m = () => console.log(this.s);
+
+        // const obj = {
+        //     s: 42,
+        //     m: globalThis.m
+        // };
+
+        // obj.m();
+
+        // function insert(value) {
+        //     return {into: function (array) {
+        //         return {after: function (afterValue) {
+        //             array.splice(array.indexOf(afterValue) + 1, 0, value);
+        //             return array;
+        //         }};
+        //     }};
+        // }
+
+        // console.log(insert(2).into([1, 3]).after(1));
+
+        // let insert = (value) => ({into: (array) => ({after: (afterValue) => {
+        //     array.splice(array.indexOf(afterValue) + 1, 0, value);
+        //     return array;
+        // }})});
+
+        // console.log(insert(2).into([1, 3]).after(1));
+
+        // const pipeline = (...funcs) =>
+        //     val => funcs.reduce((a, b) => b(a), val);
+
+        // const plus1 = a => a + 1;
+        // const mult2 = a => a * 2;
+        // const addThenMult = pipeline(plus1, mult2);
+
+        // console.log(addThenMult(5));
+
+        // const plus1 = a => a + 1;
+        // const mult2 = a => a * 2;
+
+        // console.log(mult2(plus1(5)));
+
+        // λ演算的写法
+        // fix = λf.(λx.f(λv.x(x)(v)))(λx.f(λv.x(x)(v)))
+
+        // ES6的写法
+        // var fix = f => (x => f(v => x(x)(v)))
+        //     (x => f(v => x(x)(v)));
+
+        // function factorial(n) {
+        //     if (n === 1) return 1;
+        //     return n * factorial(n - 1);
+        // }
+
+        // console.log(factorial(5));
+
+        // function factorial(n, total) {
+        //     if (n === 1) return total;
+        //     return factorial(n - 1, n * total);
+        // }
+        // console.log(factorial(5, 1))
+
+        // function Fibonacci(n) {
+        //     if (n <= 1) {return 1};
+
+        //     return Fibonacci(n - 1) + Fibonacci(n - 2);
+        // }
+
+        // console.log(Fibonacci(10));
+        // console.log(Fibonacci(100));
+        // console.log(Fibonacci(500));
     </script>
 </body>
 </html>
